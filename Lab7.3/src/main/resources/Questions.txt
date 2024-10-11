@@ -1,0 +1,40 @@
+    What are the differences between List, Set, and Map? When would you use them? They are interfaces included with JDK,  what are they used for?
+
+    Differences Between List, Set, and Map
+        List:
+            An ordered collection (sequence) of elements that can contain duplicates.
+            Use when you need to maintain the order of insertion and allow duplicates.
+            ArrayList, LinkedList, etc.
+
+        Set:
+            A collection that does not allow duplicates. Order is not guaranteed unless using a sorted implementation.
+            Use when you want to store unique elements without duplicates.
+            HashSet, LinkedHashSet, TreeSet, etc.
+
+        Map:
+            A collection of key-value pairs. Keys must be unique, but values can be duplicated.
+            Use when you need to store relationships between pairs of objects, where each key is associated with exactly one value.
+            HashMap, TreeMap, LinkedHashMap, etc.
+
+
+     How does a HashMap store items in memory? Be sure to explain HashTable, HashCodes, and collisions.
+        A HashMap stores data as key-value pairs. Each key is associated with a specific value allows you to retrieve the value using its key.
+        The HashMap uses an internal array to hold the key-value pairs. Each index in this array is referred to as a "bucket."
+        The hash code determines the bucket in the hash table where the key-value pair will be stored.
+
+        "Collisions" is when two different keys can have the same hash code and thus leads to a collision.
+
+     How you could use Comparators to custom sort each Collection? How do SortedMap and SortedSets work?
+        A Comparator is used to define custom sorting rules for collections via the comparator interface.
+
+        A SortedMap is a Map that maintains its key-value pairs in sorted order, according to the default / predefined sort.
+            TreeMap is the most common implementation of SortedMap
+
+        A SortedSet is a Set that maintains its elements in sorted order, according to the default / predefined sort.
+            TreeSet is a common implementation of the SortedSet interface.
+
+        Default SortL
+            (smallest to largest for int) or (alphabetical for strings)
+
+        Both can have custom comparator implementations.
+
